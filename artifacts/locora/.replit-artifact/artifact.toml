@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Locora"
+description = "A hyperlocal discovery and request platform for finding nearby offers, shops, products, and services around Greater Noida."
+version = "1.0.0"
+id = "artifacts/locora"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18718
+
+[services.development]
+run = "pnpm --filter @workspace/locora run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/locora", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/locora/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18718"
+BASE_PATH = "/"

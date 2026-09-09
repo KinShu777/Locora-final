@@ -1,0 +1,935 @@
+Build a complete, polished MVP web application called "Locora".
+
+Locora is a hyperlocal discovery and request platform that connects customers with nearby local businesses.
+
+The core idea is simple:
+
+Businesses can tell nearby customers what they currently have, such as offers, discounts, new stock, restocked products, or services.
+
+Customers can also tell nearby businesses what they are looking for.
+
+The platform matches the two based on location, category, price and availability.
+
+This is a hackathon MVP, so use realistic mock data and simulated functionality where a real backend would be unnecessary. However, the UI and interactions should feel like a real consumer application rather than a student demo.
+
+==================================================
+TECH STACK
+==================================================
+
+Use:
+
+- React
+- Vite
+- JavaScript
+- Plain CSS / CSS modules
+- Lucide React for icons
+- Leaflet + OpenStreetMap for the map
+
+DO NOT USE TAILWIND CSS.
+
+Do not introduce unnecessary frameworks or dependencies.
+
+Use clean reusable React components and a sensible project structure.
+
+The application must be easy to run and deploy on Replit.
+
+==================================================
+DESIGN DIRECTION
+==================================================
+
+The design should feel like a modern Indian consumer application.
+
+Take general UX inspiration from apps such as Blinkit, Zepto, Swiggy and Zomato because Indian users are familiar with their interaction patterns.
+
+DO NOT copy their branding, exact colors, layouts or visual identity.
+
+Locora needs its own identity.
+
+The app should feel:
+
+- modern
+- friendly
+- visual
+- clean
+- practical
+- slightly playful
+- familiar to Indian users
+
+Do NOT make it look like:
+
+- a SaaS dashboard
+- a college project
+- an admin panel
+- a generic Bootstrap website
+- a fake phone mockup
+- a futuristic AI interface
+
+Avoid:
+
+- gradients
+- excessive glassmorphism
+- excessive rounded cards
+- excessive shadows
+- excessive icons
+- huge empty spaces
+- walls of text
+
+Use:
+
+- strong typography
+- clean spacing
+- high-quality imagery
+- vector illustrations
+- attractive product cards
+- offer banners
+- subtle borders
+- restrained shadows
+- solid colors
+
+Choose a distinctive Locora color palette yourself.
+
+A warm coral/orange primary accent combined with dark navy text and light neutral backgrounds is one possible direction, but feel free to improve on it.
+
+==================================================
+RESPONSIVE LAYOUT
+==================================================
+
+IMPORTANT:
+
+Do NOT create a fake 9:16 phone frame.
+
+Do NOT center a tiny phone-shaped application on desktop.
+
+The application should use the full browser viewport.
+
+Design mobile-first, but make it responsive.
+
+On mobile:
+
+- compact header
+- bottom navigation
+- horizontally scrollable categories
+- vertically stacked content
+- touch-friendly controls
+
+On desktop:
+
+- use the available width intelligently
+- create wider content sections
+- use grids for advertisements and businesses
+- maintain a polished consumer-app appearance
+
+The same application should feel natural on both mobile and desktop.
+
+==================================================
+MAIN USER EXPERIENCE
+==================================================
+
+The primary user journey is:
+
+Open Locora
+→ Set location and exposure radius
+→ See nearby offers
+→ Tap "I'm looking for..."
+→ Create a request
+→ Broadcast request
+→ Nearby businesses respond
+→ Compare responses
+→ Open a shop profile
+→ Choose a business
+
+This flow must be extremely polished.
+
+==================================================
+HOME SCREEN
+==================================================
+
+Create a visually rich home page.
+
+HEADER
+
+Top area should contain:
+
+Locora logo/name
+
+Current location:
+
+Delivering to
+WORK - Gate no-1, GL Bajaj...
+
+On the right:
+
+location/range control
+
+Example:
+
+1.5 km
+
+Clicking the range control opens the location/radius interface.
+
+Use realistic Greater Noida / GL Bajaj mock location data.
+
+--------------------------------------------------
+PRIMARY REQUEST BAR
+--------------------------------------------------
+
+This is one of the most important elements on the page.
+
+Create a large prominent search/request bar saying:
+
+"I'm looking for..."
+
+Below it, optionally show a subtle helper text:
+
+"Find it nearby or ask local businesses"
+
+This is NOT a normal product search bar.
+
+It is a way for the user to tell Locora what they need.
+
+Examples:
+
+"I need a black formal shirt under ₹1500"
+
+"I need a birthday cake for tomorrow"
+
+"I need someone to stitch my kurta"
+
+"I need a scientific calculator"
+
+"I need a laptop repair"
+
+Clicking this opens the request creation interface.
+
+==================================================
+CATEGORY NAVIGATION
+==================================================
+
+Below the request bar create a horizontally scrollable category row.
+
+Categories:
+
+All
+Food
+Fashion
+Electronics
+Beauty
+Services
+Stationery
+Home
+Repair
+Events
+
+Make the category selector visually attractive but compact.
+
+Clicking a category should actually filter the mock offers and businesses.
+
+==================================================
+NEARBY OFFERS
+==================================================
+
+Create a major section:
+
+Nearby Offers
+
+Show visually attractive advertisements from nearby businesses.
+
+Do NOT make these simple text rectangles.
+
+Use product photography or suitable visual assets.
+
+Examples:
+
+20% OFF
+Formal Shoes
+Sharma Footwear
+₹1,200 → ₹960
+4.2 ★
+0.4 km away
+
+New Stock
+JBL Headphones
+Gupta Electronics
+₹2,499
+4.7 ★
+0.8 km away
+
+Buy 1 Get 1
+Selected Desserts
+Cake & Crumb
+₹150
+4.8 ★
+1.2 km away
+
+Other examples:
+
+Back to College Sale
+New Arrivals
+Restocked
+Today Only
+Festive Collection
+Clearance Sale
+
+Use a mix of:
+
+- horizontal promotional banners
+- image-based cards
+- smaller offer cards
+- shop discovery cards
+
+Do not make every card identical.
+
+==================================================
+EXPLORE AROUND YOU
+==================================================
+
+Create a section:
+
+Explore Around You
+
+Show nearby businesses with attractive imagery.
+
+Examples:
+
+Sharma Footwear
+Gupta Electronics
+Cake & Crumb
+The Stitch House
+Campus Print Hub
+Aggarwal Bakers
+Royal Mobile Point
+Modern Repair Works
+
+Each business should show:
+
+- image
+- name
+- category
+- rating
+- review count
+- distance
+
+Clicking a business opens its profile.
+
+==================================================
+REQUEST CREATION
+==================================================
+
+When the user clicks:
+
+"I'm looking for..."
+
+open a polished full-screen mobile sheet/modal or dedicated request screen.
+
+Title:
+
+"What are you looking for?"
+
+Fields:
+
+1. Request
+Large text field
+
+2. Description
+Additional details
+
+3. Category
+Food
+Fashion
+Electronics
+Services
+Repair
+etc.
+
+4. Budget
+Minimum / maximum or expected price
+
+5. Quantity
+
+6. Required by
+Today
+Tomorrow
+Specific time
+
+7. Preferred distance
+
+8. Upload photos
+
+9. Additional notes
+
+The UI must NOT look like a boring HTML form.
+
+Use clear sections and visual hierarchy.
+
+--------------------------------------------------
+MULTIPLE REQUESTS
+--------------------------------------------------
+
+Allow users to add multiple requests.
+
+Example:
+
+Request 1
+Birthday cake
+
+Request 2
+Photographer
+
+Request 3
+Decoration supplies
+
+Show them as separate request cards.
+
+Button:
+
+"+ Add another request"
+
+Then:
+
+"Broadcast Request"
+
+==================================================
+FAKE BROADCAST SYSTEM
+==================================================
+
+No real backend is required.
+
+When the user broadcasts:
+
+Show a short loading state:
+
+"Finding nearby businesses..."
+
+Then:
+
+"Request broadcasted"
+
+Then:
+
+"4 nearby businesses responded"
+
+The response count should be randomly generated between approximately 2 and 6.
+
+==================================================
+IMPORTANT RANDOMIZED RESPONSE LOGIC
+==================================================
+
+Every request submitted must produce different mock results.
+
+Do NOT hardcode one response.
+
+If the user searches for:
+
+"cake"
+
+generate bakery-related businesses.
+
+If the user searches for:
+
+"shoes"
+
+generate footwear businesses.
+
+If the user searches for:
+
+"phone charger"
+
+generate electronics/mobile shops.
+
+If the user searches for:
+
+"stitching"
+
+generate tailoring businesses.
+
+If the request is something unusual or unknown, generate believable local businesses anyway.
+
+Use the request text to determine the category when possible.
+
+Randomize:
+
+- number of responses
+- business names
+- distance
+- price
+- rating
+- review count
+- response time
+- availability
+
+The results should look different each time.
+
+==================================================
+RESPONSE RESULTS
+==================================================
+
+After broadcasting, show:
+
+"4 businesses responded"
+
+Subtitle:
+
+"Businesses nearby that can help with your request"
+
+Add sorting/filtering:
+
+Closest
+Lowest Price
+Highest Rated
+Fastest
+
+These filters must actually change the order of the mock results.
+
+Business cards should contain:
+
+- business image
+- business name
+- category
+- distance
+- rating
+- reviews
+- price
+- availability
+- response time
+
+Example:
+
+Gupta Electronics
+
+0.8 km away
+
+₹2,499
+
+4.7 ★
+421 reviews
+
+Available now
+
+Responded in 2 min
+
+Buttons:
+
+View Shop
+Contact
+
+==================================================
+SHOP PROFILE
+==================================================
+
+Create a polished local business profile.
+
+Top:
+
+Large cover image
+
+Business name
+
+4.7 ★
+421 reviews
+
+0.8 km away
+
+Category
+
+Then sections:
+
+About
+
+Popular Products / Services
+
+Current Offers
+
+Customer Reviews
+
+Opening Hours
+
+Location
+
+Contact
+
+Example products:
+
+Wireless Earphones
+Chargers
+Power Banks
+Mobile Covers
+Laptop Repair
+Screen Guards
+
+Use product images.
+
+Customer reviews should be realistic Indian reviews.
+
+==================================================
+ADVERTISEMENT DETAILS
+==================================================
+
+Clicking an advertisement should open an offer detail view.
+
+Show:
+
+Business name
+Offer title
+Image
+Description
+Original price
+Discounted price
+Rating
+Distance
+Valid until
+
+Buttons:
+
+Get Directions
+View Shop
+
+==================================================
+LOCATION AND RANGE
+==================================================
+
+This feature is important.
+
+Use Leaflet with OpenStreetMap.
+
+Create a location/range interface showing an actual map.
+
+Use mock coordinates around:
+
+GL Bajaj Institute of Technology and Management
+Greater Noida
+
+Show:
+
+- current/mock user location
+- circular exposure radius
+- nearby business markers
+
+Radius choices:
+
+500 m
+1 km
+2 km
+5 km
+10 km
+
+Changing the radius should update the visual circle.
+
+Also provide:
+
+"Enter location manually"
+
+The actual location does not need to affect real backend data.
+
+The purpose is to make the feature visually convincing.
+
+==================================================
+REQUESTS SCREEN
+==================================================
+
+Bottom navigation / main navigation should contain:
+
+Home
+Requests
+Explore
+Notifications
+Profile
+
+Requests screen should show:
+
+Active Requests
+
+Completed Requests
+
+Example:
+
+Black formal shoes under ₹1500
+
+4 businesses responded
+
+Posted 5 min ago
+
+View Responses
+
+Completed:
+
+Phone charger
+
+Resolved
+
+Clicking an active request should reopen its response results.
+
+==================================================
+EXPLORE SCREEN
+==================================================
+
+Make Explore highly visual.
+
+Show:
+
+Nearby Offers
+Trending Nearby
+New Stock
+Restocked
+Popular Shops
+Categories
+
+Use attractive imagery.
+
+Allow category filtering.
+
+==================================================
+NOTIFICATIONS
+==================================================
+
+Create realistic mock notifications.
+
+Examples:
+
+"4 businesses responded to your cake request."
+
+"New offer 500m away."
+
+"Gupta Electronics restocked wireless headphones."
+
+"Your request received a new response."
+
+"20% off at Sharma Footwear, 700m away."
+
+Show unread notification count.
+
+==================================================
+PROFILE
+==================================================
+
+Create a simple consumer profile.
+
+Use mock user:
+
+Shu
+
+Show:
+
+Location
+Requests
+Saved Shops
+Saved Offers
+
+Also show:
+
+Local Activity
+
+Keep this simple.
+
+No authentication required.
+
+==================================================
+MOCK DATA
+==================================================
+
+Create substantial mock data.
+
+Businesses:
+
+Sharma Footwear
+Gupta Electronics
+Cake & Crumb
+The Stitch House
+Campus Print Hub
+Aggarwal Bakers
+Royal Mobile Point
+Modern Repair Works
+Style Street
+Brew Corner
+Metro Stationery
+TechZone Electronics
+
+Use Indian businesses and realistic Indian prices.
+
+Use ₹ currency.
+
+Use Greater Noida / Delhi NCR style locations.
+
+Create enough products, services, advertisements, reviews and offers that the application feels populated.
+
+==================================================
+IMAGES
+==================================================
+
+This is extremely important.
+
+The current goal is a visual consumer app.
+
+Use actual product/shop imagery wherever appropriate.
+
+Do NOT represent products using only icons.
+
+For images, use reliable remote image URLs or appropriate image APIs where practical.
+
+If remote image loading is unreliable, include fallback images/placeholders so the UI never looks broken.
+
+Images should cover categories such as:
+
+- shoes
+- headphones
+- cakes
+- food
+- clothing
+- stationery
+- electronics
+- salons
+- repair
+- local shops
+
+Use consistent image aspect ratios.
+
+==================================================
+BOTTOM NAVIGATION
+==================================================
+
+On mobile, use a clean bottom navigation bar:
+
+Home
+Requests
+Explore
+Notifications
+Profile
+
+Active tab should be visually distinct.
+
+On desktop, adapt the navigation rather than creating an oversized mobile bottom bar.
+
+==================================================
+MICROINTERACTIONS
+==================================================
+
+Implement subtle animations for:
+
+- opening request interface
+- submitting a request
+- fake matching/loading
+- cards appearing
+- filters
+- category selection
+- opening shop profiles
+- opening advertisements
+- notifications
+
+Do not overdo animations.
+
+==================================================
+ACCESSIBILITY AND UX
+==================================================
+
+Buttons should be obvious.
+
+Text should remain readable.
+
+Touch targets should be large enough.
+
+Do not make users hunt for important actions.
+
+The main action should always be obvious:
+
+"I'm looking for..."
+
+==================================================
+CODE QUALITY
+==================================================
+
+Organize the code cleanly.
+
+Suggested structure:
+
+src/
+  components/
+  pages/
+  data/
+  utils/
+  styles/
+
+Create reusable components for:
+
+- OfferCard
+- BusinessCard
+- CategoryChip
+- RequestModal
+- RequestCard
+- ResponseCard
+- ShopProfile
+- NotificationItem
+- RadiusSelector
+- MapView
+- BottomNavigation
+
+Keep mock data separate from UI components.
+
+Keep random response generation in utility functions.
+
+==================================================
+NO BACKEND REQUIREMENT
+==================================================
+
+Do not waste time implementing:
+
+- authentication
+- real merchant accounts
+- payment gateways
+- real push notifications
+- real GPS tracking
+- real business databases
+
+Use mock data and local state.
+
+The application should still feel interactive and convincing.
+
+==================================================
+FINAL QUALITY BAR
+==================================================
+
+The most important thing is visual quality.
+
+The current goal is NOT to make the smallest possible prototype.
+
+The goal is to make something that looks like a real consumer startup product.
+
+A judge should be able to open the site and immediately understand:
+
+"This helps me find things and businesses near me."
+
+The strongest demo flow should be:
+
+Home
+→ Set radius
+→ Browse nearby offers
+→ I'm looking for...
+→ Create request
+→ Broadcast
+→ Businesses respond
+→ Filter responses
+→ View shop
+→ Choose business
+
+Make that flow extremely polished.
+
+Before finishing, test the application at:
+
+- mobile width
+- tablet width
+- desktop width
+
+Fix:
+
+- overflow
+- broken images
+- awkward spacing
+- text wrapping
+- buttons that don't work
+- inconsistent card sizes
+- map rendering issues
+- navigation issues
+
+Do not stop after creating the basic structure.
+
+Actually run the application, inspect the rendered result and refine the UI until it looks like a polished consumer product.
+
+Build the MVP now.
